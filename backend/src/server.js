@@ -31,5 +31,19 @@ app.use('/api/upload', uploadRoutes);
 
 app.get('/api/health', (req, res) => res.json({ status: 'OK' }));
 
+// One-time admin setup route — upgrades user to admin using a secret key
+app.post('/api/setup-admin', async (req, res) => {
+  try {
+    const { email, secret } = req.body;
+    if (secret !== 'EDUPREP_SETUP_2025') return res.status(403).json({ message: 'Invalid secret' });
+    const User = require('./models/User');
+    const user = await User.findOneAndUpdate({ email }, { role: 'admin' }, { new: true });
+    if (!user) return res.status(404).json({ message: 'User not found' });
+    res.json({ message: `${email} upgraded to admin` });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
