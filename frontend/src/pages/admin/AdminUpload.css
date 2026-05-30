@@ -1,0 +1,4 @@
+.upload-page { max-width: 900px; }
+
+.q-review-card { margin-bottom: 16px; padding: 20px; border-left: 3px solid #4f46e5; }
+.q-review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }

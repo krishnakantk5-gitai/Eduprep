@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Build output
+frontend/build/
+backend/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Uploads
+backend/uploads/
+
+# Scraper downloads (too large for GitHub)
+scraper/downloads/
+scraper/node_modules/
+
+# Doc generator
+docgen/node_modules/

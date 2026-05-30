@@ -1,0 +1,44 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1b4b 0%, #4f46e5 100%);
+  padding: 20px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.auth-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #4f46e5;
+  margin-bottom: 8px;
+}
+
+.auth-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
+.auth-subtitle { color: #6b7280; margin-bottom: 24px; }
+.auth-link { margin-top: 20px; text-align: center; font-size: 0.9rem; color: #6b7280; }
+.auth-link a { color: #4f46e5; font-weight: 500; }
+
+.w-full { width: 100%; justify-content: center; margin-top: 8px; }
+
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.checkbox-label input { width: auto; }
